@@ -20,6 +20,18 @@ function trackDownload(item) {
     } else {
         console.warn('Google Analytics (gtag) not available for tracking download');
     }
+
+    // Track with Plausible (if available)
+    if (typeof plausible === 'function') {
+        try {
+            plausible('Download', { props: { resource: item } });
+            console.log(`Plausible tracked download: ${item}`);
+        } catch (error) {
+            console.error(`Error tracking download in Plausible: ${error}`);
+        }
+    } else {
+        console.warn('Plausible not available for tracking download');
+    }
 }
 
 function trackClick(action) {
@@ -41,6 +53,18 @@ function trackClick(action) {
     } else {
         console.warn('Google Analytics (gtag) not available for tracking click');
     }
+
+    // Track with Plausible (if available)
+    if (typeof plausible === 'function') {
+        try {
+            plausible('Click', { props: { action: action } });
+            console.log(`Plausible tracked click: ${action}`);
+        } catch (error) {
+            console.error(`Error tracking click in Plausible: ${error}`);
+        }
+    } else {
+        console.warn('Plausible not available for tracking click');
+    }
 }
 
 // Ensure the script initializes properly
@@ -49,6 +73,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Optional: Check if Google Analytics is loaded
     if (typeof gtag !== 'function') {
-        console.warn('Google Analytics (gtag) is not loaded. Tracking will be limited to console logs.');
+        console.warn('Google Analytics (gtag) is not loaded. Tracking will be limited to console logs and Plausible (if available).');
+    }
+
+    // Optional: Check if Plausible is loaded
+    if (typeof plausible !== 'function') {
+        console.warn('Plausible is not loaded. Tracking will be limited to console logs and Google Analytics (if available).');
     }
 });
