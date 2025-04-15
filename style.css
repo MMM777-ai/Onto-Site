@@ -125,12 +125,55 @@ body {
     margin-bottom: 20px;
 }
 
+.visuals h3 {
+    font-size: 1.4em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
 .diagram {
     max-width: 100%;
     height: auto;
-    margin: 20px 0;
+    margin: 10px 0;
     border: 1px solid #e5e7eb;
     border-radius: 5px;
+}
+
+/* Strategic Fit Section */
+.strategic-fit {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.strategic-fit h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.strategic-fit ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.strategic-fit li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.strategic-fit li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+}
+
+.strategic-fit strong {
+    color: #1f2937;
+    font-weight: 600;
 }
 
 /* Call to Action Section */
@@ -141,7 +184,20 @@ body {
 
 .cta h2 {
     font-size: 1.8em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    color: #4b5563;
+}
+
+.cta small {
+    display: block;
+    margin-top: 15px;
+    color: #6b7280;
+    font-size: 0.9em;
 }
 
 .cta-buttons {
@@ -183,7 +239,11 @@ body {
         font-size: 0.9em;
     }
 
-    .about h2, .benefits h2, .visuals h2, .cta h2 {
+    .about h2, .benefits h2, .visuals h2, .strategic-fit h2, .cta h2 {
         font-size: 1.5em;
+    }
+
+    .visuals h3 {
+        font-size: 1.2em;
     }
 }
