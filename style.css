@@ -1,7 +1,7 @@
 /* Define CSS variables for light/dark mode support */
 :root {
     --intelligence-bg: #f9f9f9;
-    --intelligence-border: #e0e0e0;
+    --intelligence-border: #dcdcdc;
     --intelligence-text: #111111;
     --text-primary: #333;
     --text-secondary: #4b5563;
@@ -9,6 +9,11 @@
     --bg-primary: #f9fafb;
     --bg-footer: #1f2937;
     --link-color: #93c5fd;
+}
+
+/* Smooth scrolling for AOS animations */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Reset and Base Styles */
@@ -70,12 +75,18 @@ body {
 }
 
 .btn.secondary {
-    background: #e5e7eb;
-    color: #1f2937;
+    background-color: #003366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 .btn.secondary:hover {
-    background: #d1d5db;
+    background-color: #005099;
 }
 
 /* About Section */
@@ -169,48 +180,6 @@ body {
     max-width: 80%;
 }
 
-/* Intelligence Section */
-#intelligence-section {
-    margin: 3rem auto;
-    padding: 2rem;
-    border: 2px solid var(--intelligence-border);
-    border-radius: 12px;
-    background-color: var(--intelligence-bg);
-    max-width: 850px;
-    text-align: left;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.03);
-}
-
-.intelligence-container h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: var(--intelligence-text);
-}
-
-.intelligence-list {
-    padding-left: 1.5rem;
-    list-style: none;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.intelligence-list li {
-    margin-bottom: 0.8rem;
-    font-size: 1rem;
-}
-
-.intelligence-list li::marker {
-    content: none; /* prevent default bullets */
-}
-
-.intelligence-summary,
-.nda-note {
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 1rem;
-}
-
 /* Strategic Fit Section */
 .strategic-fit {
     padding: 40px 20px;
@@ -295,6 +264,58 @@ body {
     text-decoration: underline;
 }
 
+/* Intelligence Section */
+.intelligence-section {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--intelligence-bg);
+}
+
+.intelligence-box {
+    border: 2px solid var(--intelligence-border);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.intelligence-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.intelligence-box .highlight {
+    color: #003366;
+}
+
+.intelligence-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.intelligence-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.intelligence-summary,
+.nda-note {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 0.5rem;
+}
+
+.intelligence-cta {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
     .hero h1 {
@@ -326,18 +347,20 @@ body {
         font-size: 1.0em;
     }
 
-    #intelligence-section {
-        margin: 1.5rem auto;
+    .intelligence-section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .intelligence-box {
         padding: 1rem;
     }
 
-    .intelligence-container h2 {
+    .intelligence-box h2 {
         font-size: 1.5rem;
     }
 
     .intelligence-list {
         font-size: 0.9rem;
-        padding-left: 1rem;
     }
 
     .intelligence-summary,
