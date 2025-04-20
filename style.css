@@ -1,3 +1,16 @@
+/* Define CSS variables for light/dark mode support */
+:root {
+    --intelligence-bg: #ffffff;
+    --intelligence-border: #eaeaea;
+    --intelligence-text: #111111;
+    --text-primary: #333;
+    --text-secondary: #4b5563;
+    --text-tertiary: #6b7280;
+    --bg-primary: #f9fafb;
+    --bg-footer: #1f2937;
+    --link-color: #93c5fd;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -8,7 +21,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-primary);
 }
 
 /* Container */
@@ -68,7 +81,7 @@ body {
 /* About Section */
 .about {
     padding: 40px 20px;
-    background: #f9fafb;
+    background: var(--bg-primary);
     text-align: center;
 }
 
@@ -116,7 +129,7 @@ body {
 /* Visuals Section */
 .visuals {
     padding: 40px 20px;
-    background: #f9fafb;
+    background: var(--bg-primary);
     text-align: center;
 }
 
@@ -132,12 +145,59 @@ body {
     color: #1f2937;
 }
 
+.trust-pipeline-heading {
+    font-size: 1.2em;
+}
+
+.executive-summary-heading {
+    font-size: 1.2em;
+}
+
 .diagram {
     max-width: 100%;
     height: auto;
     margin: 10px 0;
     border: 1px solid #e5e7eb;
     border-radius: 5px;
+}
+
+.trust-pipeline-img {
+    max-width: 80%;
+}
+
+.visual-summary-img {
+    max-width: 80%;
+}
+
+/* Intelligence Section */
+.intelligence-section {
+    background-color: var(--intelligence-bg);
+    padding: 40px 20px;
+    border-top: 1px solid var(--intelligence-border);
+    text-align: left;
+}
+
+.intelligence-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--intelligence-text);
+}
+
+.intelligence-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.intelligence-list li {
+    margin-bottom: 12px;
+}
+
+.intelligence-list strong {
+    display: inline-block;
+    font-weight: 600;
 }
 
 /* Strategic Fit Section */
@@ -190,13 +250,13 @@ body {
 .cta p {
     max-width: 600px;
     margin: 0 auto 20px;
-    color: #4b5563;
+    color: var(--text-secondary);
 }
 
 .cta small {
     display: block;
     margin-top: 15px;
-    color: #6b7280;
+    color: var(--text-tertiary);
     font-size: 0.9em;
 }
 
@@ -209,14 +269,14 @@ body {
 
 /* Footer */
 .footer {
-    background: #1f2937;
+    background: var(--bg-footer);
     color: white;
     padding: 20px;
     text-align: center;
 }
 
 .footer a {
-    color: #93c5fd;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -245,5 +305,21 @@ body {
 
     .visuals h3 {
         font-size: 1.2em;
+    }
+
+    .trust-pipeline-heading {
+        font-size: 1.0em;
+    }
+
+    .executive-summary-heading {
+        font-size: 1.0em;
+    }
+
+    .intelligence-section h2 {
+        font-size: 20px;
+    }
+
+    .intelligence-list {
+        font-size: 14px;
     }
 }
