@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>ONTOGUARD AI: Trustworthy AI for Enterprises</title>
     <meta name="description" content="Discover Ontology-Enhanced AI, a compliance-aware AI layer for trust and adaptability. Download the white paper and explore our demo.">
     <!-- Open Graph Tags for Social Sharing -->
@@ -16,7 +17,7 @@
     <!-- AOS Library for Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Schema.org Microdata -->
+    <!-- Schema.org Microdata for Software Application -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,6 +36,16 @@
         "price": "Contact for licensing",
         "priceCurrency": "USD"
       }
+    }
+    </script>
+    <!-- Schema.org Microdata for Contact -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPoint",
+      "email": "mailto:mark.starobinsky@ontoguard.ai",
+      "contactType": "Business Inquiries",
+      "availableLanguage": "English"
     }
     </script>
     <!-- Favicon for branding -->
@@ -65,7 +76,7 @@
     <!-- About Section -->
     <section class="about">
         <div class="container">
-            <h2>About the Invention</h2>
+            <h2 data-aos="fade-in">About the Invention</h2>
             <p>Unlike traditional AI that guesses patterns, Ontology-Enhanced AI understands meaning. It’s a semantic framework that ensures AI follows laws, explains decisions, and earns trust—perfect for finance, healthcare, and legal applications. The platform is patent-pending, deployable today, and fully owned by OntoGuard AI for licensing or acquisition.</p>
         </div>
     </section>
@@ -73,7 +84,7 @@
     <!-- Benefits Section -->
     <section class="benefits">
         <div class="container">
-            <h2>Key Benefits</h2>
+            <h2 data-aos="fade-in">Key Benefits</h2>
             <ul>
                 <li>Sub-50ms trust scoring for real-time decisions</li>
                 <li>GDPR, HIPAA, and EU AI Act compliance by design</li>
@@ -85,10 +96,26 @@
         </div>
     </section>
 
+    <!-- Use Case Section -->
+    <section id="use-case" class="use-case-section" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
+            <h2><span class="icon">💼</span> Illustrative Use Case – <span class="highlight">Financial Compliance</span></h2>
+            <p class="use-case-lead">
+                A large language model analyzing regulatory disclosures flagged three outputs as high-risk for SEC violations.
+            </p>
+            <p>
+                OntoGuard AI automatically <strong>tagged</strong>, <strong>symbolically traced</strong>, and <strong>scored</strong> each instance — all in under <strong>50ms</strong> — enabling real-time auditor review <strong>before filing</strong>.
+            </p>
+            <p>
+                This prevented potential reporting infractions without requiring retraining or model slowdown.
+            </p>
+        </div>
+    </section>
+
     <!-- Visuals Section -->
     <section class="visuals">
         <div class="container">
-            <h2>How It Works</h2>
+            <h2 data-aos="fade-in">How It Works</h2>
 
             <h3>1. The AI Evolution</h3>
             <img src="assets/ai_evolution.png" alt="LLM Evolution to Ontology-Enhanced AI" class="diagram" loading="lazy">
@@ -99,18 +126,19 @@
             <h3 class="trust-pipeline-heading">3. The AI Trust Pipeline</h3>
             <img src="assets/ai_trust_pipeline.png" alt="AI Validation and Compliance Scoring" class="diagram trust-pipeline-img" loading="lazy">
 
-            <h3 class="executive-summary-heading">4. Executive Summary</h3>
-            <img src="assets/1-Page Visual Summary.png" alt="One-Page Overview of Ontology-Enhanced AI" class="diagram visual-summary-img" loading="lazy">
+            <h3 id="visual-summary" class="executive-summary-heading">4. Executive Summary</h3>
+            <img src="assets/1-Page Visual Summary.png" alt="AI Reasoning, Compliance, and Symbolic Trust System Overview" class="diagram visual-summary-img" loading="lazy">
+            <a href="#contact" class="btn secondary" style="margin-top: 20px;">📄 NDA Access Request</a>
 
             <!-- Updated Intelligence Section -->
             <section class="intelligence-section" id="intelligence" data-aos="fade-up">
                 <div class="intelligence-box">
                     <h2 data-aos="fade-in" data-aos-delay="100">Not Just Ontology — <span class="highlight">Built-in Intelligence</span></h2>
                     <ul class="intelligence-list">
-                        <li data-aos="fade-up" data-aos-delay="0">🧠 <strong>Adaptive Symbolic Reasoning:</strong> Context-aware inferences, not static facts</li>
-                        <li data-aos="fade-up" data-aos-delay="100">🔁 <strong>Self-Evolving Feedback Loop:</strong> Dynamically self-corrects using domain knowledge</li>
-                        <li data-aos="fade-up" data-aos-delay="200">📊 <strong>Probabilistic Trust Engine:</strong> Quantifies uncertainty with semantic validation</li>
-                        <li data-aos="fade-up" data-aos-delay="300">🛡️ <strong>Logical Compliance Scoring:</strong> Enforces interpretable, real-time policy constraints</li>
+                        <li data-aos="fade-up" data-aos-delay="150">🧠 <strong>Adaptive Symbolic Reasoning:</strong> Context-aware inferences, not static facts</li>
+                        <li data-aos="fade-up" data-aos-delay="300">🔁 <strong>Self-Evolving Feedback Loop:</strong> Dynamically self-corrects using domain knowledge</li>
+                        <li data-aos="fade-up" data-aos-delay="450">📊 <strong>Probabilistic Trust Engine:</strong> Quantifies uncertainty with semantic validation</li>
+                        <li data-aos="fade-up" data-aos-delay="600">🛡️ <strong>Logical Compliance Scoring:</strong> Enforces interpretable, real-time policy constraints</li>
                     </ul>
                     <p class="intelligence-summary">Our patent-pending system weaves dynamic knowledge with validation, ensuring compliance and trust.</p>
                     <p class="nda-note"><strong>Full technical details available under NDA.</strong></p>
@@ -125,7 +153,7 @@
     <!-- Strategic Fit Section -->
     <section class="strategic-fit">
         <div class="container">
-            <h2>Strategic Fit</h2>
+            <h2 data-aos="fade-in">Strategic Fit</h2>
             <ul>
                 <li><strong>GenAI / LLM:</strong> Anthropic, Cohere, OpenAI, Scale AI, AWS AI</li>
                 <li><strong>Enterprise AI:</strong> Salesforce, UiPath, Microsoft, SAP, Oracle</li>
@@ -139,10 +167,10 @@
     <!-- Call to Action Section -->
     <section class="cta">
         <div class="container">
-            <h2>See It in Action</h2>
+            <h2 data-aos="fade-in">See It in Action</h2>
             <p>Explore the live demo or reach out for a deeper strategic discussion under NDA.</p>
             <div class="cta-buttons">
-                <a href="assets/Ontology-Enhanced AI - Public White Paper.pdf" class="btn primary" onclick="trackDownload('White Paper')">Download White Paper</a>
+                <a href="#contact" class="btn secondary">Request Enterprise Access</a>
                 <a href="https://your-streamlit-demo-link" class="btn secondary" onclick="trackClick('Demo')" target="_blank">🎯 Launch Live Demo</a>
                 <a href="#" id="contact-nda" class="btn secondary" onclick="trackClick('Contact')">Contact for NDA</a>
             </div>
@@ -172,5 +200,5 @@
             once: true
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'933643544817ed8b',t:'MTc0NTE2OTEwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9336572d0d03676e',t:'MTc0NTE2OTkyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93366514c89144ff',t:'MTc0NTE3MDQ5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9336c3865f43b03a',t:'MTc0NTE3NDM2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93375a2fc88bbce4',t:'MTc0NTE4MDUzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93379803aa66ad8c',t:'MTc0NTE4MzA2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93382f0dbe9ab004',t:'MTc0NTE4OTI1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'933871a9d9d453f1',t:'MTc0NTE5MTk3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>

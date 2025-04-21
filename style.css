@@ -137,6 +137,47 @@ body {
     color: #10b981;
 }
 
+/* Use Case Section */
+.use-case-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.use-case-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.use-case-lead {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.use-case-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+.use-case-section strong {
+    font-weight: 600;
+    color: #222;
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 /* Visuals Section */
 .visuals {
     padding: 40px 20px;
@@ -316,6 +357,29 @@ body {
     text-align: center;
 }
 
+/* Use Case Box */
+.use-case-box {
+    border: 1px solid var(--intelligence-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    text-align: left;
+}
+
+.use-case-box h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.use-case-box p {
+    font-size: 1rem;
+    color: #444;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
     .hero h1 {
@@ -366,5 +430,38 @@ body {
     .intelligence-summary,
     .nda-note {
         font-size: 0.9rem;
+    }
+
+    .use-case-box {
+        padding: 1rem;
+        margin: 15px auto;
+    }
+
+    .use-case-box h3 {
+        font-size: 1.2em;
+    }
+
+    .use-case-box p {
+        font-size: 0.9rem;
+    }
+
+    .use-case-section {
+        padding: 40px 15px;
+    }
+
+    .use-case-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .use-case-lead {
+        font-size: 1rem;
+    }
+
+    .use-case-section p {
+        font-size: 0.9rem;
+    }
+
+    .icon {
+        font-size: 1.2rem;
     }
 }
