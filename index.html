@@ -55,29 +55,114 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .hero-subheading {
-            font-size: 1.8em;
-            margin-bottom: 10px;
+            font-size: 1.6em;
+            margin-bottom: 5px;
+            margin-top: -10px;
             color: white;
             opacity: 0.9;
+        }
+        .center-message h2 {
+            color: #000;
+            font-weight: 700;
+            text-shadow: none;
+        }
+        .center-message p {
+            line-height: 1.6;
+        }
+        .hero-banner-logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: auto;
+            max-width: 200px; /* reduced from 320px */
+            object-fit: contain;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.75; /* soften visibility slightly */
+        }
+        @media screen and (max-width: 600px) {
+            .hero-banner-logo {
+                height: auto;
+                max-height: 240px;
+                position: static;
+                display: block;
+                margin: 0 auto 20px;
+            }
+        }
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            z-index: 9999;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1em;
+        }
+        body {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#core">What It Does</a></li>
+                <li><a href="#use-case">Use Case</a></li>
+                <li><a href="#visuals">Visuals</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" style="margin-top: 60px; padding: 40px 0 30px; position: relative;">
+        <img src="assets/Brand.png" alt="OntoGuard AI Logo" class="hero-banner-logo" loading="lazy">
         <div class="container">
             <h1>ONTOGUARD AI</h1>
-            <h2 class="hero-subheading">Ontology-Enhanced Artificial Intelligence</h2>
-            <p class="subtitle">The symbolic compliance layer for trustworthy generative AI</p>
-            <a href="assets/Ontology-Enhanced AI - Public White Paper.pdf" class="btn primary" onclick="trackDownload('White Paper')">Download White Paper</a>
+            <h2 class="hero-subheading">The Compliance & Trust Plugin for Large Language Models</h2>
+            <p class="subtitle">A lightweight overlay that wraps around your LLM — delivering real-time trust scoring, symbolic validation, and legal compliance. No retraining. No rewriting. Just plug it in.</p>
+            <div class="cta-buttons" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="assets/Ontology-Enhanced AI - Public White Paper.pdf" class="btn primary" onclick="trackDownload('White Paper')">📄 Download White Paper</a>
+                <a href="assets/What This AI System Really Does.pdf" class="btn secondary" onclick="trackDownload('Executive Brief')">📄 Executive Brief</a>
+            </div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2 data-aos="fade-in">About the Invention</h2>
-            <p>Unlike traditional AI that guesses patterns, Ontology-Enhanced AI understands meaning. It’s a semantic framework that ensures AI follows laws, explains decisions, and earns trust—perfect for finance, healthcare, and legal applications. The platform is patent-pending, deployable today, and fully owned by OntoGuard AI for licensing or acquisition.</p>
+    <!-- Core Proposition Section -->
+    <section id="core" class="center-message" style="background: #eaf6ff; color: #000; padding: 50px 20px; text-align: center; border-bottom: 4px solid white;">
+        <div class="container" data-aos="fade-in" aria-label="OntoGuard AI Core Proposition">
+            <h2 style="font-size: 2.8em; margin-bottom: 0.4em;">Why OntoGuard AI Exists</h2>
+            <p style="font-size: 1.3em; max-width: 900px; margin: 0 auto 20px;">
+                Large language models like GPT, Claude, and Gemini are powerful — but they still make mistakes, break rules, and are hard to explain.
+            </p>
+            <p style="font-size: 1.3em; max-width: 900px; margin: 0 auto 20px;">
+                OntoGuard AI doesn’t replace these models. It <strong>plugs into them</strong> — adding real-time trust scoring, legal compliance checks, and a transparent reasoning trail.
+            </p>
+            <p style="font-size: 1.3em; max-width: 900px; margin: 0 auto 20px;">
+                Think of it as <strong>a seatbelt, a dashboard, and a legal expert</strong> for your AI — all in one. No retraining. No rewiring. Just wrap your model and go.
+            </p>
+            <p style="font-size: 1.3em; max-width: 900px; margin: 0 auto;">
+                Unlike other approaches,<strong>OntoGuard doesn’t require you to retrain your model every time rules change or new risks appear.</strong>. It learns continuously through structured knowledge, symbolic logic, and feedback — keeping your LLM up to date without touching its core weights.
+            </p>
+            <p style="font-size: 1.3em; max-width: 900px; margin: 0 auto;">
+                This is <strong>not for banks or pharmaceutical companies, although they will indirectly benefit</strong>. It’s for the tech companies building and deploying generative AI — and need it to be <strong>explainable, compliant, and safe</strong>.
+            </p>
         </div>
     </section>
 
@@ -92,7 +177,6 @@
                 <li>No costly retraining—evolving knowledge graphs</li>
                 <li>Reduces hallucination risks with validation</li>
             </ul>
-            <a href="assets/What This AI System Really Does.pdf" class="btn secondary" onclick="trackDownload('Executive Brief')">📄 Download the Executive Brief</a>
         </div>
     </section>
 
@@ -113,7 +197,7 @@
     </section>
 
     <!-- Visuals Section -->
-    <section class="visuals">
+    <section id="visuals" class="visuals">
         <div class="container">
             <h2 data-aos="fade-in">How It Works</h2>
 
@@ -128,7 +212,7 @@
 
             <h3 id="visual-summary" class="executive-summary-heading">4. Executive Summary</h3>
             <img src="assets/1-Page Visual Summary.png" alt="AI Reasoning, Compliance, and Symbolic Trust System Overview" class="diagram visual-summary-img" loading="lazy">
-            <a href="mailto:mark.starobinsky@ontoguard.ai?subject=NDA%20Access%20Request&body=Hello%20Mark,%0D%0A%0D%0AI’d%20like%20to%20request%20access%20to%20the%20NDA-bound%20white%20papers%20and%20demo.%0D%0A%0D%0ACompany:%0D%0ARole:%0D%0APurpose%20of%20Review:%0D%0A%0D%0AThanks," class="btn secondary" style="margin-top: 20px;">📄 NDA Access Request</a>
+            <a href="mailto:mark.starobinsky@ontoguard.ai" class="btn secondary" style="margin-top: 20px;">📄 NDA Access Request</a>
 
             <!-- Updated Intelligence Section -->
             <section class="intelligence-section" id="intelligence" data-aos="fade-up">
@@ -164,12 +248,12 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section class="cta">
+    <section id="contact" class="cta">
         <div class="container">
             <h2 data-aos="fade-in">See It in Action</h2>
             <p>Explore the live demo or reach out for a deeper strategic discussion under NDA.</p>
             <div class="cta-buttons">
-                <a href="mailto:mark.starobinsky@ontoguard.ai?subject=Request Enterprise Access&body=Hi Mark,%0D%0A%0D%0AI’m exploring enterprise applications of your AI framework. Please share your enterprise access kit or integration materials under NDA.%0D%0A%0D%0ACompany:%0D%0ARole:%0D%0AUse Case Focus:%0D%0A%0D%0ARegards," class="btn secondary">Request Enterprise Access</a>
+                <a href="mailto:mark.starobinsky@ontoguard.ai" class="btn secondary">Request Enterprise Access</a>
                 <a href="https://ontoguardwebdemo.streamlit.app/" class="btn secondary" onclick="trackClick('Demo')" target="_blank">🎯 Launch Live Demo</a>
                 <a href="#" id="contact-nda" class="btn secondary" onclick="trackClick('Contact')">Contact for NDA</a>
             </div>
@@ -185,6 +269,7 @@
         </div>
     </footer>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="script.js"></script>
     <!-- Anti-spam email rendering -->
     <script>
@@ -199,5 +284,5 @@
             once: true
         });
     </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93bb76f71cadc95c',t:'MTc0NjU2NTgzMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||       function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
